@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ZeQuizz GOTY</string>
+    <string name="vsIA">1 vs IA</string>
+    <string name="vsP">1 vs 1</string>
+    <string name="teamVersus">Equipe A vs Equipe B</string>
+    <string name="offline">Hors ligne :</string>
+    <string name="online">En ligne :</string>
+    <string name="vsPonline">1 vs 1 en ligne</string>
+    <string name="team">Equipe :</string>
+    <string name="lifes">Vies :</string>
+    <string name="player">Joueur :</string>
+    <string name="score">Score :</string>
+    <string name="value">Valeur</string>
+    <string name="question">Question</string>
+    <string name="answer1">Answer1</string>
+    <string name="answer2">Answer2</string>
+    <string name="answer3">Answer3</string>
+    <string name="answer4">Answer4</string>
+</resources>
