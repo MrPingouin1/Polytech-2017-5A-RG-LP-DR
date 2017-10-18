@@ -1,37 +1,49 @@
 package fr.greyl.robin.applicationtest;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final Button b_online = (Button) findViewById(R.id.b_vsPonline);
-
-        b_online.setOnClickListener(new View.OnClickListener() {
-            int i = 1;
+        final Button b_vsIA = (Button) findViewById(R.id.b_vsIA);
+        b_vsIA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //while(true) {
-                    b_online.setText(String.valueOf(i++));
-                    try {
-                        Thread.sleep(200);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-               // }
+
+                Log.d("toto","onclick ok");
+                startActivity(new Intent(MainActivity.this, QuestionActivity.class));
+
+            }
+        });
+
+        final Button b_vsPonline = (Button) findViewById(R.id.b_vsPonline);
+        b_vsPonline.setOnClickListener(new View.OnClickListener() {
+            int i = 0;
+            @Override
+            public void onClick(View v) {
+                i++;
+                b_vsPonline.setText(String.valueOf(i));
+
+                try {
+                    Thread.sleep(200);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
 
             }
         });
     }
+
+
 
     @Override
     protected void onStart() {
