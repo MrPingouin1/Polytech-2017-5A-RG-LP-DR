@@ -1,4 +1,4 @@
-package fr.greyl.robin.applicationtest;
+package fr.greyl.robin.AndroidTP;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

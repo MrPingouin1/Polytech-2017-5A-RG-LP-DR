@@ -1,4 +1,4 @@
-package fr.greyl.robin.applicationtest;
+package fr.greyl.robin.AndroidTP;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,12 +7,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class SelectionActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_selection);
 
         final Button b_vsIA = (Button) findViewById(R.id.b_vsIA);
         b_vsIA.setOnClickListener(new View.OnClickListener() {
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Log.d("toto","onclick ok");
-                startActivity(new Intent(MainActivity.this, QuestionActivity.class));
+                startActivity(new Intent(SelectionActivity.this, QuestionActivity.class));
 
             }
         });

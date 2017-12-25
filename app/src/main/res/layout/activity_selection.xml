@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    tools:context="fr.greyl.robin.applicationtest.MainActivity">
+    tools:context="fr.greyl.robin.AndroidTP.SelectionActivity">
 
     <TableLayout
         android:id="@+id/layoutOffline"

@@ -1,4 +1,4 @@
-package fr.greyl.robin.applicationtest;
+package fr.greyl.robin.AndroidTP;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
