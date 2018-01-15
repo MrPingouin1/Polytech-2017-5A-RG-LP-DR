@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import polytech.android.LGLPDR.AndroidApp.questions.SelectionActivity;
+
 /**
  * Created by Robin on 21/12/2017.
  */

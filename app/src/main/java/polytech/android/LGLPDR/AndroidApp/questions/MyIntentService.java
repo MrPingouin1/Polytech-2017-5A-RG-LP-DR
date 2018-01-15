@@ -1,4 +1,4 @@
-package polytech.android.LGLPDR.AndroidApp;
+package polytech.android.LGLPDR.AndroidApp.questions;
 
 import android.app.IntentService;
 import android.content.Intent;
