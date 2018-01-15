@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import polytech.android.LGLPDR.AndroidApp.beers.BeerActivity;
+import polytech.android.LGLPDR.AndroidApp.beers.fragments.ListBeerFragment;
 import polytech.android.LGLPDR.AndroidApp.questions.SelectionActivity;
 
 /**
@@ -21,6 +23,13 @@ public class HomeActivity extends AppCompatActivity {
 
         final Button button_beer = (Button) findViewById(R.id.beer_app);
         final Button button_question = (Button) findViewById(R.id.question_app);
+
+        button_beer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, BeerActivity.class));
+            }
+        });
 
         button_question.setOnClickListener(new View.OnClickListener() {
             @Override
