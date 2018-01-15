@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="polytech.android.LGLPDR.AndroidApp" >
+    package="polytech.android.RGLPDR.AndroidApp" >
 
     <application
         android:allowBackup="true"
@@ -9,10 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="polytech.android.LGLPDR.AndroidApp.questions.SelectionActivity" ></activity>
-        <activity android:name="polytech.android.LGLPDR.AndroidApp.questions.QuestionActivity" ></activity>
-        <activity android:name="polytech.android.LGLPDR.AndroidApp.beers.BeerActivity"></activity>
-        <activity android:name="polytech.android.LGLPDR.AndroidApp.HomeActivity">
+        <activity android:name="polytech.android.RGLPDR.AndroidApp.questions.SelectionActivity" ></activity>
+        <activity android:name="polytech.android.RGLPDR.AndroidApp.questions.QuestionActivity" ></activity>
+        <activity android:name="polytech.android.RGLPDR.AndroidApp.beers.BeerActivity"></activity>
+        <activity android:name="polytech.android.RGLPDR.AndroidApp.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
