@@ -1,4 +1,4 @@
-package polytech.android.LGLPDR.AndroidApp.beers.fragments;
+package polytech.android.RGLPDR.AndroidApp.beers.fragments;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import polytech.android.LGLPDR.AndroidApp.R;
+import polytech.android.RGLPDR.AndroidApp.R;
 
 /**
  * Created by Robin on 15/01/2018.

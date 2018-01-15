@@ -1,4 +1,4 @@
-package polytech.android.LGLPDR.AndroidApp.questions;
+package polytech.android.RGLPDR.AndroidApp.questions;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,7 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import polytech.android.LGLPDR.AndroidApp.R;
+import polytech.android.RGLPDR.AndroidApp.R;
 
 public class SelectionActivity extends AppCompatActivity {
 

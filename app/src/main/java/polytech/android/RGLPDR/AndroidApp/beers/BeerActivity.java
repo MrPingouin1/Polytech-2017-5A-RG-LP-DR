@@ -1,9 +1,9 @@
-package polytech.android.LGLPDR.AndroidApp.beers;
+package polytech.android.RGLPDR.AndroidApp.beers;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import polytech.android.LGLPDR.AndroidApp.R;
+import polytech.android.RGLPDR.AndroidApp.R;
 
 /**
  * Created by Robin on 15/01/2018.

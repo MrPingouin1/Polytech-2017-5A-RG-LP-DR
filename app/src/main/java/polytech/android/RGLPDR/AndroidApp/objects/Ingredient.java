@@ -1,4 +1,4 @@
-package polytech.android.LGLPDR.AndroidApp.objects;
+package polytech.android.RGLPDR.AndroidApp.objects;
 
 import java.util.Map;
 
