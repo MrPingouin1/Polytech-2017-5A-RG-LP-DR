@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="fr.greyl.robin.AndroidTP" >
+    package="polytech.android.LGLPDR.AndroidApp" >
 
     <application
         android:allowBackup="true"
@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="fr.greyl.robin.AndroidTP.SelectionActivity" >
+        <activity android:name="polytech.android.LGLPDR.AndroidApp.SelectionActivity" >
         </activity>
-        <activity android:name="fr.greyl.robin.AndroidTP.QuestionActivity" >
+        <activity android:name="polytech.android.LGLPDR.AndroidApp.QuestionActivity" >
         </activity>
-        <activity android:name=".HomeActivity">
+        <activity android:name="polytech.android.LGLPDR.AndroidApp.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

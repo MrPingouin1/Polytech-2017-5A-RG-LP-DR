@@ -1,4 +1,4 @@
-package fr.greyl.robin.AndroidTP;
+package polytech.android.LGLPDR.AndroidApp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

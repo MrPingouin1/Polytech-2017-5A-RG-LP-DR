@@ -1,4 +1,4 @@
-package fr.greyl.robin.AndroidTP;
+package polytech.android.LGLPDR.AndroidApp;
 
 import android.app.IntentService;
 import android.content.Intent;
