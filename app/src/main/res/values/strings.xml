@@ -1,3 +1,21 @@
 <resources>
-    <string name="app_name">ApplicationTest</string>
+    <string name="app_name">ZeQuizz GOTY</string>
+    <string name="vsIA">1 vs AI</string>
+    <string name="vsP">1 vs 1</string>
+    <string name="teamVersus">Team A vs Team B</string>
+    <string name="offline">Offline :</string>
+    <string name="online">Online :</string>
+    <string name="vsPonline">1 vs 1 online</string>
+    <string name="team">Team :</string>
+    <string name="lifes">Lifes :</string>
+    <string name="player">Player :</string>
+    <string name="score">Score : </string>
+    <string name="value">Value</string>
+    <string name="question">Question</string>
+    <string name="answer1">Answer1</string>
+    <string name="answer2">Answer2</string>
+    <string name="answer3">Answer3</string>
+    <string name="answer4">Answer4</string>
+    <string name="beer_app">Beer App</string>
+    <string name="question_app">Question App</string>
 </resources>
