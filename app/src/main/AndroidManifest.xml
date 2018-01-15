@@ -9,10 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="polytech.android.LGLPDR.AndroidApp.SelectionActivity" >
-        </activity>
-        <activity android:name="polytech.android.LGLPDR.AndroidApp.QuestionActivity" >
-        </activity>
+        <activity android:name="polytech.android.LGLPDR.AndroidApp.questions.SelectionActivity" ></activity>
+        <activity android:name="polytech.android.LGLPDR.AndroidApp.questions.QuestionActivity" ></activity>
+        <activity android:name="polytech.android.LGLPDR.AndroidApp.beers.BeerActivity"></activity>
         <activity android:name="polytech.android.LGLPDR.AndroidApp.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
