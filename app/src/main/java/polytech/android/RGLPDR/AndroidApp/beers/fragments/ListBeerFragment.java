@@ -21,6 +21,7 @@ import java.util.List;
 
 import polytech.android.RGLPDR.AndroidApp.R;
 import polytech.android.RGLPDR.AndroidApp.beers.BeerAdapter;
+import polytech.android.RGLPDR.AndroidApp.beers.listeners.EndlessScrollListener;
 import polytech.android.RGLPDR.AndroidApp.objects.Beer;
 
 import static android.content.ContentValues.TAG;
@@ -30,6 +31,7 @@ public class ListBeerFragment extends Fragment {
     private ListView listView;
     private List<Beer> beerList;
     private BeerAdapter beerAdapter;
+    private Integer page;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -40,18 +42,32 @@ public class ListBeerFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        beerList = new ArrayList<>();
+        this.beerList = new ArrayList<>();
         this.listView = (ListView) getActivity().findViewById(R.id.beerList);
+        this.page = 1;
+
+        this.listView.setOnScrollListener(new EndlessScrollListener() {
+            @Override
+            public boolean onLoadMore(int page, int totalItemsCount) {
+                loadMore(page);
+                return true;
+            }
+        });
 
         listBeer();
     }
 
+    private void loadMore(Integer page) {
+        Log.d(TAG, "ça passe");
+        this.page = page;
+        listBeer();
+    }
+
     private void listBeer() {
-        final String api_url = "https://api.punkapi.com/v2/beers";
+        final String api_url = "https://api.punkapi.com/v2/beers?page=" + page;
         final Beer default_beer = new Beer();
         final Context context = getActivity().getApplicationContext();
         RequestQueue queue = Volley.newRequestQueue(context);
-        beerList = new ArrayList<>();
 
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest (api_url, response -> {
             try {
@@ -66,8 +82,14 @@ public class ListBeerFragment extends Fragment {
                 beerList.add(default_beer);
             }
 
-            beerAdapter = new BeerAdapter(context, beerList);
-            listView.setAdapter(beerAdapter);}, null);
+            if(page == 1) {
+                beerAdapter = new BeerAdapter(context, beerList);
+                listView.setAdapter(beerAdapter);
+            }
+            else {
+                listView.deferNotifyDataSetChanged();
+            }
+        }, null);
         queue.add(jsonArrayRequest);
     }
 
