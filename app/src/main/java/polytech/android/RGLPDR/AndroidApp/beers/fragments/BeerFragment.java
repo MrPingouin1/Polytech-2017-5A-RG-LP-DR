@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import java.util.Arrays;
+import java.util.stream.Collector;
+
 import polytech.android.RGLPDR.AndroidApp.R;
 import polytech.android.RGLPDR.AndroidApp.objects.Beer;
 
@@ -35,5 +38,23 @@ public class BeerFragment extends Fragment {
         ((TextView) getActivity().findViewById(R.id.beerTaglineDetails)).setText(beer.getTagline());
         ((TextView) getActivity().findViewById(R.id.beerDescriptionDetails)).setText(beer.getDescription());
         ((TextView) getActivity().findViewById(R.id.beerBrewersTipsDetails)).setText(beer.getBrewers_tips());
+
+        ((TextView) getActivity().findViewById(R.id.beerFirstBrewedDetails)).setText(beer.getFirst_brewed());
+
+        ((TextView) getActivity().findViewById(R.id.beerABVDetails)).setText(beer.getAbv().toString());
+        ((TextView) getActivity().findViewById(R.id.beerIBUDetails)).setText(beer.getIbu().toString());
+        ((TextView) getActivity().findViewById(R.id.beerTargetFGDetails)).setText(beer.getTarget_fg().toString());
+        ((TextView) getActivity().findViewById(R.id.beerTargetOGDetails)).setText(beer.getTarget_og().toString());
+        ((TextView) getActivity().findViewById(R.id.beerEBCDetails)).setText(beer.getEbc().toString());
+        ((TextView) getActivity().findViewById(R.id.beerSRMDetails)).setText(beer.getSrm().toString());
+        ((TextView) getActivity().findViewById(R.id.beerPHDetails)).setText(beer.getPh().toString());
+
+        ((TextView) getActivity().findViewById(R.id.beerAttenuationLevelDetails)).setText(beer.getAttenuation_level().toString());
+
+        ((TextView) getActivity().findViewById(R.id.beerIngredientsMaltDetails)).setText(beer.getIngredient("malt"));
+        ((TextView) getActivity().findViewById(R.id.beerIngredientsHopsDetails)).setText(beer.getIngredient("hops"));
+        ((TextView) getActivity().findViewById(R.id.beerIngredientsYeastDetails)).setText(beer.getIngredient("yeast"));
+
+        ((TextView) getActivity().findViewById(R.id.beerContributedByDetails)).setText(beer.getContributor());
     }
 }
