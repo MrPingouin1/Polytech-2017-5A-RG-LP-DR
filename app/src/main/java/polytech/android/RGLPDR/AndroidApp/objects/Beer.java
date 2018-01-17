@@ -215,4 +215,13 @@ public class Beer implements Serializable {
     public void setIngredients(Map<String, List<String>> ingredients) {
         this.ingredients = ingredients;
     }
+
+
+    public String getIngredient(String ingredient) {
+        String ingredients = "";
+        for(String i : this.ingredients.get(ingredient)) {
+            ingredients = ingredients.concat(i + "\n");
+        }
+        return ingredients;
+    }
 }
