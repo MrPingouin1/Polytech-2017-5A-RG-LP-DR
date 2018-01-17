@@ -3,6 +3,7 @@ package polytech.android.RGLPDR.AndroidApp.beers.fragments;
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,6 +43,24 @@ public class ListBeerFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        init();
+        listBeer();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        init();
+        listBeer();
+    }
+
+    private void loadMore(Integer page) {
+        this.page = page;
+        listBeer();
+    }
+
+    private void init() {
         this.beerList = new ArrayList<>();
         this.listView = (ListView) getActivity().findViewById(R.id.beerList);
         this.page = 1;
@@ -53,14 +72,6 @@ public class ListBeerFragment extends Fragment {
                 return true;
             }
         });
-
-        listBeer();
-    }
-
-    private void loadMore(Integer page) {
-        Log.d(TAG, "ça passe");
-        this.page = page;
-        listBeer();
     }
 
     private void listBeer() {
@@ -88,9 +99,24 @@ public class ListBeerFragment extends Fragment {
             }
             else {
                 listView.deferNotifyDataSetChanged();
+                this.beerAdapter.setNotifyOnChange(true);
             }
         }, null);
         queue.add(jsonArrayRequest);
+
+        this.listView.setOnItemClickListener((parent, view, position, id) -> {
+            BeerFragment beerFragment = new BeerFragment();
+
+            Bundle bundle = new Bundle();
+            Beer beer = beerList.get(position);
+            bundle.putSerializable("beer", beer);
+            beerFragment.setArguments(bundle);
+
+            FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.beerFragment, beerFragment);
+            transaction.addToBackStack(null);
+            transaction.commit();
+        });
     }
 
 }

@@ -1,19 +1,17 @@
 package polytech.android.RGLPDR.AndroidApp.objects;
 
-import android.os.Build;
-import android.support.annotation.RequiresApi;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-public class Beer {
+public class Beer implements Serializable {
 
     private Integer id;
     private String name;
