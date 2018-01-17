@@ -17,14 +17,11 @@ public class SelectionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_selection);
 
         final Button b_vsIA = (Button) findViewById(R.id.b_vsIA);
-        b_vsIA.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        b_vsIA.setOnClickListener(v -> {
 
-                Log.d("toto","onclick ok");
-                startActivity(new Intent(SelectionActivity.this, QuestionActivity.class));
+            Log.d("toto","onclick ok");
+            startActivity(new Intent(SelectionActivity.this, QuestionActivity.class));
 
-            }
         });
 
         final Button b_vsPonline = (Button) findViewById(R.id.b_vsPonline);

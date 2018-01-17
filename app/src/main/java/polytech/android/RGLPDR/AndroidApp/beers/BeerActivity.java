@@ -6,10 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import polytech.android.RGLPDR.AndroidApp.R;
 import polytech.android.RGLPDR.AndroidApp.beers.fragments.ListBeerFragment;
 
-/**
- * Created by Robin on 15/01/2018.
- */
-
 public class BeerActivity extends AppCompatActivity {
 
     @Override

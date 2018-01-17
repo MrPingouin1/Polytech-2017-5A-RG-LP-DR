@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/beerImageDetails"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:background="#AAA" />
+
+    <TextView
+        android:id="@+id/beerNameDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/beerImageDetails"
+        android:layout_alignTop="@+id/beerImageDetails"
+        android:textStyle="bold"
+        tools:text="Name of the beer" />
+
+    <TextView
+        android:id="@+id/beerTaglineDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="10dp"
+        tools:text="Tagline of the beer"
+        android:layout_alignBottom="@+id/beerImageDetails"
+        android:layout_toEndOf="@+id/beerImageDetails" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#FF909090"
+        android:layout_below="@+id/beerImageDetails"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/beerDescriptionDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        tools:text="Description of the beer"
+        android:layout_below="@+id/beerImageDetails"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#FF909090"
+        android:layout_below="@+id/beerDescriptionDetails"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/beerBrewersTipsDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        tools:text="BrewersTips"
+        android:layout_below="@+id/beerDescriptionDetails"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+
+</RelativeLayout>
